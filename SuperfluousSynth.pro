@@ -7,7 +7,7 @@ linux {
     soundfonts.files = FluidR3_GM.sf2
     soundfonts.path = /usr/share/sounds/sf2/
 
-    INSTALLS += target soundfonts
+    INSTALLS += target
 }
 
 SOURCES += \
@@ -92,7 +92,9 @@ OTHER_FILES += \
     VexFlow/frethandfinger.js \
     notevalues.js \
     README \
-    LICENSE
+    LICENSE \
+    MainView.qml \
+    SplashScreen.qml
 
 HEADERS += \
     synthengine.h \

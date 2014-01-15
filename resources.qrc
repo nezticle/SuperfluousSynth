@@ -66,5 +66,7 @@
         <file>VexFlow/fonts/vexflow_font.js</file>
         <file>NoteViewer.qml</file>
         <file>notevalues.js</file>
+        <file>MainView.qml</file>
+        <file>SplashScreen.qml</file>
     </qresource>
 </RCC>
