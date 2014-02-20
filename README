@@ -12,4 +12,3 @@ qmake FLUIDSYNTH_INCLUDEPATH=/home/nezticle/Code/fluidsynth-1.1.6/include FLUIDS
 make
 
 by default will install/deply to /opt/SuperfluousSynth/
-

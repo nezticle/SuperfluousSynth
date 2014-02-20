@@ -68,5 +68,8 @@
         <file>notevalues.js</file>
         <file>MainView.qml</file>
         <file>SplashScreen.qml</file>
+        <file>InfoMenuItem.qml</file>
+        <file>ChordViewerPage.qml</file>
+        <file>InstrumentSelectionPage.qml</file>
     </qresource>
 </RCC>

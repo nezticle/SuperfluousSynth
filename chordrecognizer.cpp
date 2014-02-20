@@ -38,6 +38,8 @@
 #include "chordrecognizer.h"
 #include "chord.h"
 
+#include <QDebug>
+
 ChordRecognizer::ChordRecognizer(QObject *parent)
     : QObject(parent)
     , m_chordName("")
@@ -69,7 +71,7 @@ void ChordRecognizer::removeNote(const QString &keyValue)
         emit chordNameChanged();
 
     } else if (m_noteValues.count() == 1) {
-        m_chordName = keyValue.toUpper();
+        m_chordName = m_noteValues.first().toUpper();
         emit chordNameChanged();
     } else {
         update();
@@ -90,6 +92,10 @@ void ChordRecognizer::update()
 
 void ChordRecognizer::buildChordTable()
 {
+    // recognize perfect eights (octave)
+    QList<QString> octave = QList<QString>() << "c" << "c";
+    registerNewChordType(octave,ChordDescriptor("c","octave","c"));
+
     // recognize minor second = inverse of major 7th
     QList<QString> minorSecond = QList<QString>() << "c" << "c#";
     registerNewChordType(minorSecond,ChordDescriptor("c","minorsecond","c"));

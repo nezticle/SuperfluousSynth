@@ -94,7 +94,10 @@ OTHER_FILES += \
     README \
     LICENSE \
     MainView.qml \
-    SplashScreen.qml
+    SplashScreen.qml \
+    InstrumentSelectionPage.qml \
+    ChordViewerPage.qml \
+    InfoMenuItem.qml
 
 HEADERS += \
     synthengine.h \

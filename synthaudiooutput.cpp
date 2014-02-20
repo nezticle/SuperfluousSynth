@@ -40,7 +40,7 @@
 #include <QtMultimedia/QAudioDeviceInfo>
 #include <QtMultimedia/QAudioFormat>
 
-const int BufferSize = 512;
+const int BufferSize = 8 * 128;
 
 class FluidSynthIODevice : public QIODevice
 {
@@ -123,6 +123,7 @@ void SynthAudioOutput::open()
     }
     m_buffer = new FluidSynthIODevice(m_fluidSynth, format, this);
     m_buffer->open(QIODevice::ReadOnly);
+
     m_audioOutput->setBufferSize(BufferSize);
     m_audioOutput->start(m_buffer);
 }
